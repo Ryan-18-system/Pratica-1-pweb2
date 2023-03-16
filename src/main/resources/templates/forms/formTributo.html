@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" th:action="@{/home/calcVt}">
+        <label for="nome">Nome Usuário</label>
+        <input id="nome" type="text" name="salBase">
+        <label for="aliquota"></label>
+        <select id="aliquota" name="aliq">
+            <option value=".275" label="27,5%"></option>
+            <option value=".25" label="25,5%"></option>
+            <option value=".18" label="18,8%"></option>
+            <option value=".15" label="15,5%"></option>
+        </select>
+        <button type="submit" value="Calcular">Calcular</button>
+    </form>
+    <h2>Valor Calculado: <span th:text="${valorTributavel}"></span></h2>
+</body>
+</html>
